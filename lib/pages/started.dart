@@ -78,8 +78,7 @@ class _StartedPageState extends State<StartedPage> {
                       ),
                     ),
                   ),
-                )
-
+                  ) 
               ],
             ),
             ),
