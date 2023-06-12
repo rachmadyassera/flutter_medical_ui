@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_medical_ui/widgets/doctor_item.dart';
+import 'package:flutter_medical_ui/widgets/specialist_item.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -169,7 +171,83 @@ class _HomePageState extends State<HomePage> {
                   )
                 ],
               ),
-            )
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              height: 60,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  SpecialistItem(
+                      imagePath: "assets/clean.png", imageName: "Dentist"),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  SpecialistItem(
+                      imagePath: "assets/knife.png", imageName: "Surgeon"),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  SpecialistItem(
+                      imagePath: "assets/lungs.png", imageName: "Therapy"),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  SpecialistItem(
+                      imagePath: "assets/hormones.png",
+                      imageName: "Physiologist"),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Text(
+                  "Doctor list",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16),
+                ),
+                Text(
+                  "See all",
+                  style: TextStyle(color: Colors.black45, fontSize: 16),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              height: 200,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  DoctorItem(
+                      image: "assets/1.png",
+                      name: "Nycta Gina",
+                      specialist: "Pediatrician"),
+                  DoctorItem(
+                      image: "assets/3.png",
+                      name: "Reisa Broto Asmoro",
+                      specialist: "Surgeon"),
+                  DoctorItem(
+                      image: "assets/2.png",
+                      name: "Indah Kusuma Ningrum",
+                      specialist: "Odontologist"),
+                  DoctorItem(
+                      image: "assets/4.png",
+                      name: "Mesty Ariotedjo",
+                      specialist: "Ophtamologist"),
+                ],
+              ),
+            ),
+
           ],
         ),
       )),
